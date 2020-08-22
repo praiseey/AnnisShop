@@ -1,0 +1,7 @@
+.idea
+
+#db
+db.sqlite3
+
+#environments
+venv/

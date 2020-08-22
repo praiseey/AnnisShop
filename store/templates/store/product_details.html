@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Page Content -->
+<div class="container">
+
+<div class="row">
+
+  <div class="col-lg-3">
+    <h1 class="my-4">Anni's</h1>
+    <div class="list-group">
+      <a href="{% url 'store:category' %}" class="list-group-item active">Categories</a>
+    </div>
+  </div>
+  <!-- /.col-lg-3 -->
+
+  <div class="col-lg-9">
+
+    <div class="card mt-4">
+      <img class="card-img-top img-fluid" src="{{ object.image_url }}" alt="">
+      <div class="card-body">
+        <h3 class="card-title">{{object.name}}</h3>
+        <h4>N{{object.price}}</h4>
+        <p class="card-text">{{object.description}}</p>
+        <form action="{% url 'cart:cart_add' product.id %}" method="post">
+          {{ cart_form }}
+          {% csrf_token %}
+          <input type="submit" value="Add to Cart">
+        </form>
+      </div>
+    </div>
+    <!-- /.card -->
+
+
+  </div>
+  <!-- /.col-lg-9 -->
+
+</div>
+
+</div>
+<!-- /.container -->
+
+
+{% endblock %}
