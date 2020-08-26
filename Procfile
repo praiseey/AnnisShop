@@ -1,0 +1,1 @@
+web: gunicorn annisshop.wsgi --log-file -
