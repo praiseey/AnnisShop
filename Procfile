@@ -1,1 +1,1 @@
-web: python annisshop/manage.py runserver 0.0.0.0:$PORT
+web: python AnnisShop/manage.py runserver 0.0.0.0:$PORT
