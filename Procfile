@@ -1,1 +1,1 @@
-web: gunicorn annisshop.wsgi --log-file -
+web: python annisshop/manage.py runserver 0.0.0.0:$PORT
